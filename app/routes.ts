@@ -6,7 +6,7 @@ import {
   
   export default [
     // parent route
-    route("dashboard", "routes/dashboard.tsx", [
+    route("/", "routes/dashboard.tsx", [
       // child routes
       index("routes/home.tsx"),
     //   route("settings", "routes/settings.tsx"),
