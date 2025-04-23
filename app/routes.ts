@@ -5,10 +5,10 @@ import {
   } from "@react-router/dev/routes";
   
   export default [
-    // parent route
-    route("/", "routes/dashboard.tsx", [
-      // child routes
-      index("routes/home.tsx"),
-    //   route("settings", "routes/settings.tsx"),
-    ]),
+    index("routes/home.tsx"),
+    route(":foo", "routes/layout.tsx", [
+      // route("bar", "routes/home.tsx"),
+      route("*?", "routes/not-found.tsx"),
+    ])
   ] satisfies RouteConfig;
+  
